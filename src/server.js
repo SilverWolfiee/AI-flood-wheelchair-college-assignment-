@@ -10,6 +10,7 @@ const __dirname = path.dirname(__filename);
 const app = express();
 app.use(cors()); //buat live server
 app.use(express.json());
+app.use(express.static(__dirname))
 app.use(express.urlencoded({ extended: true }));
 //get dataset
 app.get("/generate-dataset", async (req, res) => {
